@@ -1,0 +1,24 @@
+{% load static %}
+{% load django_browser_reload %}
+
+<!DOCTYPE html>
+<html data-theme="Azul" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mainHome.css' %}">
+    {% block links %}
+      
+    {% endblock links %}
+    <title>Casamento Evelt</title>
+</head>
+<body>
+    {% block conteudo %}
+
+    {% endblock conteudo %}
+
+    {% block scripts %}{% endblock scripts %}
+
+    {% django_browser_reload_script %}
+</body>
+</html>

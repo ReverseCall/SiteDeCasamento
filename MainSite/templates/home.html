@@ -1,0 +1,67 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+{% endblock links %}
+
+{% block conteudo %}
+    <section class="top-card">
+            <div class="bola top"></div>
+            <div class="bola buttom"></div>
+            <div class="card" onclick="trocarTema()">
+                <div><p>Cha de Panela</p></div>
+                <div><img src="{% static 'svg/cup_icon.svg' %}" alt=""></div>
+                <div class="nomes">Evelyn & Alguem</div>
+            </div>
+    </section>
+
+    <div class="section text-info">
+        <p>Convidamos você para fazer parte desse momento tão especial</p>
+        <div class="data-info">
+            <div class="card"><h2>Domingo</h1></div>
+            <div>
+                <div class="data">
+                    <div>16</div>
+                    <div>❤</div>
+                    <div>11</div>
+                </div>
+                <div>2026</div>
+            </div>
+            <div class="card"><h2>15 Horas</h1></div>
+        </div>
+
+        <div class="container">
+            <span>Clique nos Icones abaixo para mais informações</span>
+            <div class="card-links">
+                <div class="aline">
+                    <div class="card"></div>
+                    <span>Lista de enxoval</span>
+                </div>
+                <div class="aline">
+                    <div class="card"></div>
+                    <span>Confirmar Presença</span>
+                </div>
+                <div class="aline">
+                    <div class="card"></div>
+                    <span>Localização</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-full">
+        <img src="{% static 'img/folhaRasgada.png' %}" alt="">
+
+    </section>
+{% endblock conteudo %}
+
+{% block scripts %}
+<script src="{% static 'js/tempThemes.js'%}"></script>
+{% endblock scripts %}
