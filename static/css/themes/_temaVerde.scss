@@ -1,0 +1,7 @@
+$verdeEscuro: #41d466;
+$verdeClaro: #7ae996;
+
+[data-theme="Verde"]{
+    --temp: #{$verdeEscuro};
+    --temp2: #{$verdeClaro};
+}

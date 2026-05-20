@@ -1,0 +1,8 @@
+$azulEscuro: #1a81d6;
+$azulClaro: #5aa5eb;
+
+
+[data-theme="Azul"]{
+    --temp: #{$azulEscuro};
+    --temp2: #{$azulClaro};
+}
