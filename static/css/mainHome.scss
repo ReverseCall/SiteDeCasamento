@@ -176,11 +176,21 @@ body {
                 margin-top: 5px;
             }
         }
-        .card {
-            background-color: aqua;
+        .card { 
+            border: solid 2px;
+            border-color: $corTexto1;
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 8rem;
+                color: $corTexto1;
+
+            }
         }
     }
 }

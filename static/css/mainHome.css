@@ -192,8 +192,16 @@ body {
   margin-top: 5px;
 }
 .container .card-links .card {
-  background-color: aqua;
+  border: solid 2px;
+  border-color: rgb(155, 128, 39);
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card-links .card img {
+  width: 8rem;
+  color: rgb(155, 128, 39);
 }/*# sourceMappingURL=mainHome.css.map */
