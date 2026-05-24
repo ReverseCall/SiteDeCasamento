@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
 import os
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +25,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8ufdw-vki*d5#a2__mg=i8qdx!^69q0hs3ijb$m97s+ey6m@*5'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEV_MOD = os.getenv('DEV_MOD')
+DEBUG = True 
+
+if DEV_MOD:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = ['selecionar um host depos']
 
 ALLOWED_HOSTS = []
 
@@ -58,6 +68,12 @@ MIDDLEWARE = [
     # Produção
     "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
+
+if not DEV_MOD:
+    MIDDLEWARE.insert(
+        1,
+        'whitenoise.middleware.WhiteNoiseMiddleware',
+    )
 
 ROOT_URLCONF = 'core.urls'
 
@@ -133,3 +149,8 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+if not DEV_MOD:
+    STATICFILES_STORAGE = (
+        'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    )

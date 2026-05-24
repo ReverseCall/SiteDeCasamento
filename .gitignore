@@ -1,3 +1,4 @@
 # Virtual Env
 venv
 .vscode/
+.env

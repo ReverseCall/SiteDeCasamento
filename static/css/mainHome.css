@@ -108,6 +108,7 @@ body {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
+  margin-top: 50px !important;
 }
 
 .text-info {
@@ -121,11 +122,18 @@ body {
   padding: 0 70px;
   font-size: 2em;
   font-family: "Rubik";
-  color: rgb(155, 128, 39);
+  color: #b19435;
 }
 
 .section-full {
   margin-top: 40px;
+  width: 100%;
+}
+.section-full.paddin_top {
+  margin-top: 100px;
+}
+.section-full.paddin_down {
+  margin-bottom: 100px;
 }
 .section-full img {
   width: 100%;
@@ -146,35 +154,44 @@ body {
   flex-direction: row;
   align-items: center;
   font-size: 3.27em;
+  width: 100%;
   gap: 15px;
   margin-top: 24px;
-  color: rgb(155, 128, 39);
-  text-shadow: -2px 1px 10px rgb(185, 156, 75);
+  color: #91722c;
+  text-shadow: -2px 1px 10px #b99c4b;
   margin-bottom: 20px;
+}
+.data-info > div {
+  flex: 1;
+}
+.data-info .card {
+  font-size: 150%;
+  white-space: nowrap;
 }
 .data-info .card::before, .data-info .card::after {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
-  background-color: rgb(155, 128, 39);
+  background-color: #91722c;
+}
+.data-info .limite-data {
+  flex: 0 1 auto !important;
 }
 .data-info .data {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 140%;
   gap: 5px;
 }
 .data-info .data :nth-child(2) {
   font-size: 0.5em !important;
 }
 
-.container {
-  background-color: rgba(255, 0, 0, 0.11);
-  margin-top: 20px;
-}
-.container span {
+.container > span {
   font-size: 1.9em;
+  color: #b19435;
 }
 .container .card-links {
   display: flex;
@@ -190,10 +207,12 @@ body {
 }
 .container .card-links .aline span {
   margin-top: 5px;
+  font-size: 1.4rem;
+  color: #91722c;
 }
 .container .card-links .card {
   border: solid 2px;
-  border-color: rgb(155, 128, 39);
+  border-color: #91722c;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -201,7 +220,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container .card-links .card img {
-  width: 8rem;
-  color: rgb(155, 128, 39);
+.container .card-links .card .icone {
+  color: #91722c;
+  width: 7rem;
+}
+
+.container > p {
+  color: #6e6c66;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Rubik";
+}
+.container > p span {
+  color: #4d4b48;
+}
+
+.container .inspiracoes {
+  margin-top: -40px;
+  font-size: 600%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .inspiracoes :nth-child(1) {
+  font-family: "Monsieur La Doulaise", cursive;
+}
+.container .inspiracoes :nth-child(2) {
+  margin-top: -30px;
+  font-family: "Amatic SC", sans-serif;
 }/*# sourceMappingURL=mainHome.css.map */
